@@ -1,0 +1,46 @@
+{
+  "email": "correo@gmail.com",
+  "items": [
+    {
+      "id": "20",
+      "productName": "Classic Shoes Top White Slip On 42",
+      "image": "https://vtdlatamio.vteximg.com.br/arquivos/ids/155411/alQRJ5A.jpg?v=637334655878700000",
+      "sellingPrice": 41700,
+      "quantity": "1",
+      "link": "classic-shoes"
+    },
+    {
+      "id": "4",
+      "productName": "Vintage Phone Classic",
+      "image": "https://vtdlatamio.vteximg.com.br/arquivos/ids/155403/CyFKwq8.jpg?v=637334589272900000",
+      "sellingPrice": 13000,
+      "quantity": "1",
+      "link": "vintage-phone"
+    },
+    {
+      "id": "5",
+      "productName": "Kitzin kitizin",
+      "image": "https://vtdlatamio.vteximg.com.br/arquivos/ids/155404/MkylmSE.jpg?v=637334589274600000",
+      "sellingPrice": 7100,
+      "quantity": "1",
+      "link": "kitzin-2000189"
+    },
+    {
+      "id": "35",
+      "productName": "Top Star Color Shirt Magento",
+      "image": "https://vtdlatamio.vteximg.com.br/arquivos/ids/155406/m4iBsqH.jpg?v=637334655845530000",
+      "sellingPrice": 8300,
+      "quantity": "1",
+      "link": "star-color-top"
+    },
+    {
+      "id": "41",
+      "productName": "Top Star Color Shirt yellow",
+      "image": "https://vtdlatamio.vteximg.com.br/arquivos/ids/155407/aXf5h4e.jpg?v=637334655852430000",
+      "sellingPrice": 8300,
+      "quantity": "1",
+      "link": "star-color-top"
+    }
+  ],
+  "addToCartURL": "add?sku=20&qty=1&seller=1&sku=4&qty=1&seller=1&sku=5&qty=1&seller=1&sku=35&qty=1&seller=1&sku=41&qty=1&seller=1&sc=1"
+}
