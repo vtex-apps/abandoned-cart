@@ -1,0 +1,11 @@
+{
+  "name": "Carrito Abandonado",
+  "headline": "Proporciona notificaciones por e-mail a los compradores recordándole para que finalice la compra del carrito que fue armado pero no finalizado.",
+  "overview": "Esta aplicacion permite a su tienda enviar correos a los consumidores recordandoles que tienen un carrito sin finalizar. Esto mejora la conversion de la tienda y aumenta la fidelidad de los clientes.",
+  "features": [
+  ],
+  "websiteURL": "https://vtex.com/",
+  "support": {
+    "url": "https://support.vtex.com/hc/requests"
+  }
+}

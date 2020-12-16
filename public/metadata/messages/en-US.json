@@ -1,0 +1,11 @@
+{
+  "name": "Abandoned Cart",
+  "headline": "Provides buyers with e-mail notifications in order to remind them to complete the purchase of the cart that has been set up but not finalized.",
+  "overview": "This application allows the store to send e-mails to the consumers, reminding them that they have a pending cart. This enhances the conversion rate for the store and increases the client fidelity",
+  "features": [
+  ],
+  "websiteURL": "https://vtex.com/",
+  "support": {
+    "url": "https://support.vtex.com/hc/requests"
+  }
+}

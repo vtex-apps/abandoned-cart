@@ -1,0 +1,11 @@
+{
+  "name": "Carrinho Abandonado",
+  "headline": "Fornece notificações por e-mail para os compradores lembrando de finalizar a compra do carrinho que foi montado mas não finalizado.",
+  "overview": "Este aplicativo permite a sua loja o envio de e-mails para os clientes oferecendo o carrinho de compras que não foi comprado. Isso aumenta a taxa de conversão da loja e aumenta a fidelidade do cliente.",
+  "features": [
+  ],
+  "websiteURL": "https://vtex.com/",
+  "support": {
+    "url": "https://support.vtex.com/hc/requests"
+  }
+}
