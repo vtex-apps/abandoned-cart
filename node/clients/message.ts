@@ -1,32 +1,34 @@
 import {
-  ExternalClient,
+  JanusClient,
   InstanceOptions,
   IOContext,
 } from '@vtex/api'
+import { pipe } from 'ramda'
 
-export default class Message extends ExternalClient {
+const withCookieAsHeader = (context: IOContext) => (
+  options: InstanceOptions
+): InstanceOptions => ({
+  ...options,
+  headers: {
+    VtexIdclientAutCookie: context.authToken,
+    ...((options && options.headers) || {}),
+  },
+})
+
+export default class Message extends JanusClient {
   constructor(context: IOContext, options?: InstanceOptions) {
-    super(`http://${context.account}.vtexcommercestable.com.br/api/mail-service/pvt/`, context, options)
+    super(context, options && pipe(withCookieAsHeader(context))(options))
   }
 
-  public async sendMail(abandonedCartData: any, abandonedCartTemplate: string, tokens: {appKey: string, appToken: string}): Promise<string> {
+  public async sendMail(abandonedCartData: any, abandonedCartTemplate: string): Promise<string> {
     const data = {
-      "accountName": this.context.account,
-      "serviceType": 0,
       "templateName": abandonedCartTemplate,
       "jsonData": {
         ...abandonedCartData
       }
     }
 
-    return this.http.post(`sendmail`, data, {
-      metric: 'send-mail',
-      headers: {
-        'X-VTEX-API-AppToken': tokens.appToken,
-        'X-VTEX-API-AppKey': tokens.appKey,
-        'X-Vtex-Use-Https': "true"
-      }
-    })
+    return this.http.post(`/api/mail-service/pvt/sendmail`, data)
   }
 
 

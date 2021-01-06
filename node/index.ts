@@ -8,8 +8,6 @@ import {
 } from '@vtex/api'
 
 import { Clients } from './clients'
-import { status } from './middlewares/status'
-import { validate } from './middlewares/validate'
 import { abandonedCart } from './middlewares/abandonedCart'
 
 const TIMEOUT_MS = 10000
@@ -51,10 +49,6 @@ declare global {
 export default new Service({
   clients,
   routes: {
-    // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
-    status: method({
-      GET: [validate, status],
-    }),
     abandonedCart: method({
       POST: [abandonedCart]
     })

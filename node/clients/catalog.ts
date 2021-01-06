@@ -1,23 +1,20 @@
 import {
-  ExternalClient,
+  AppClient,
   InstanceOptions,
   IOContext,
 } from '@vtex/api'
 
-export default class Catalog extends ExternalClient {
-  constructor(context: IOContext, options?: InstanceOptions) {
-    super(`http://${context.account}.vtexcommercestable.com.br/api/catalog_system/pub/`, context, options)
+export default class Catalog extends AppClient {
+  constructor(ctx: IOContext, opts?: InstanceOptions) {
+    super('vtex.catalog-api-proxy@0.x', ctx, opts)
   }
 
   public async getProducts(skus: string[]): Promise<string> {
 
     const searchQS = skus?.map((sku: any) => `fq=skuId:${sku.id}`).join('&')
 
-    return this.http.get(`products/search?${searchQS}`, {
-      metric: 'products-get',
-      headers: {
-        "X-Vtex-Use-Https": "true"
-      }
+    return this.http.get(`/proxy/catalog/pub/products/search?${searchQS}`, {
+      metric: 'products-get'
     })
   }
 }
