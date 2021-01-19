@@ -20,7 +20,10 @@ You should follow the documentation to [Setting up Cart Abandonment (Trigger)](h
   {
     "email": "{!email}",
     "skuURL": "{!rclastcart}",
-    "template": "abandoned-cart"
+    "template": "abandoned-cart",
+    "additionalFields": { // In object you can add any additional field to send in the mail
+      "firstName": "{!firstName}"
+    } 
   }
 ```
 *The template field in the JSON above depends on the template id configured in the message center*
