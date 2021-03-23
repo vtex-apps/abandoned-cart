@@ -1,7 +1,7 @@
 {
   "name": "abandoned-cart-service",
-  "vendor": "vtex",
-  "version": "0.0.8",
+  "vendor": "vtexlatam",
+  "version": "2.0.6",
   "title": "Abandoned Cart Service",
   "description": "Abandoned cart service for Store Framework",
   "mustUpdateAt": "2018-01-04",
@@ -17,12 +17,23 @@
     "prereleasy": "bash lint.sh"
   },
   "credentialType": "absolute",
+  
+  "billingOptions": {
+    "setupRoute": "/admin/message-center/#/templates", 
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "type": "free",
+    "availableCountries": [
+      "*"
+    ]
+  },
   "policies": [
     {
       "name": "outbound-access",
       "attrs": {
         "host": "portal.vtexcommercestable.com.br",
-        "path": "/api/*"
+        "path": "/api/mail-service/pvt/*"
       }
     },
     {

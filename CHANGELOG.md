@@ -7,10 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.0.8] - 2021-01-18
-### Added
-- Add field to send additionalField from master data to the message center mail
-
 ## [0.0.7] - 2021-01-05
 ### Added
 - Add send-message policy and connection to catalog with catalog-api-proxy

@@ -28,7 +28,7 @@ export const mapProducts = (products: any, skus: any) => {
 }
 
 export const mapSkus = (skuURL: string) => {
-  const skus = skuURL.match(/(sku|qty|seller|sc)=[0-9]+/g)
+  const skus = skuURL.match(/(sku|qty|seller)=[0-9]+/g)
   let counter = 0
   return skus?.reduce((accum: any, currentValue) => {
     const splitted = currentValue.split('=')
