@@ -11,7 +11,6 @@ import { abandonedCart } from './middlewares/abandonedCart'
 
 const TIMEOUT_MS = 10000
 
-
 // This is the configuration for clients available in `ctx.clients`.
 const clients: ClientsConfig<Clients> = {
   // We pass our custom implementation of the clients bag, containing the Status client.
@@ -21,7 +20,7 @@ const clients: ClientsConfig<Clients> = {
     default: {
       retries: 2,
       timeout: TIMEOUT_MS,
-    }
+    },
   },
 }
 
@@ -40,7 +39,7 @@ export default new Service({
   clients,
   routes: {
     abandonedCart: method({
-      POST: [abandonedCart]
-    })
+      POST: [abandonedCart],
+    }),
   },
 })

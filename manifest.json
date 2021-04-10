@@ -17,16 +17,13 @@
     "prereleasy": "bash lint.sh"
   },
   "credentialType": "absolute",
-  
   "billingOptions": {
-    "setupRoute": "/admin/message-center/#/templates", 
+    "setupRoute": "/admin/message-center/#/templates",
     "support": {
       "url": "https://support.vtex.com/hc/requests"
     },
     "type": "free",
-    "availableCountries": [
-      "*"
-    ]
+    "availableCountries": ["*"]
   },
   "policies": [
     {

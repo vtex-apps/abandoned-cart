@@ -13,8 +13,6 @@ You should follow the documentation to [Setting up Cart Abandonment (Trigger)](h
 - Header fields:
 	* content-type: application/json
 	* accept: application/json
-	* x-vtex-api-apptoken: {{X-VTEX-API-AppToken}}
-	* x-vtex-api-appkey: {{X-VTEX-API-AppKey}}
 - Content as JSON field:
 ```json
   {
