@@ -3,7 +3,7 @@
   "headline": "Envie notificações por e-mail para usuários que montaram um carrinho na sua loja mas não finalizaram a compra.",
   "overview": "Este aplicativo permite à sua loja o envio de e-mails para os clientes oferecendo o carrinho de compras que não foi comprado. Isso aumenta a taxa de conversão da loja e aumenta a fidelidade do cliente. Este app monitora os carrinhos abandonados da sua loja e envia e-mails automáticos para os clientes.",
   "features": [
-      "Envie e-mails aos consumidores lembrando-os de que eles têm um carrinho pendente"
+    "Envie e-mails aos consumidores lembrando-os de que eles têm um carrinho pendente"
   ],
   "websiteURL": "https://vtex.com/",
   "support": {

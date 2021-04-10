@@ -1,9 +1,12 @@
-import {
-  JanusClient,
-  InstanceOptions,
-  IOContext,
-} from '@vtex/api'
+import { JanusClient, InstanceOptions, IOContext } from '@vtex/api'
 import { pipe } from 'ramda'
+
+interface AbandonedCartMailParameters {
+  items: MailItem[]
+  email: string
+  addToCartURL: string
+  additionalFields: any
+}
 
 const withCookieAsHeader = (context: IOContext) => (
   options: InstanceOptions
@@ -11,7 +14,7 @@ const withCookieAsHeader = (context: IOContext) => (
   ...options,
   headers: {
     VtexIdclientAutCookie: context.authToken,
-    ...((options && options.headers) || {}),
+    ...(options?.headers ?? {}),
   },
 })
 
@@ -20,16 +23,17 @@ export default class Message extends JanusClient {
     super(context, options && pipe(withCookieAsHeader(context))(options))
   }
 
-  public async sendMail(abandonedCartData: any, abandonedCartTemplate: string): Promise<string> {
+  public async sendMail(
+    abandonedCartData: AbandonedCartMailParameters,
+    abandonedCartTemplate: string
+  ): Promise<string> {
     const data = {
-      "templateName": abandonedCartTemplate,
-      "jsonData": {
-        ...abandonedCartData
-      }
+      templateName: abandonedCartTemplate,
+      jsonData: {
+        ...abandonedCartData,
+      },
     }
 
     return this.http.post(`/api/mail-service/pvt/sendmail`, data)
   }
-
-
 }
