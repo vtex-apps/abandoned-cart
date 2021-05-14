@@ -54,4 +54,4 @@ Aditionally to the trigger configuration, you must create the message center tem
 ```
 
 
-The `addToCartURL` variable is formatted to work with the [cart URL](https://help.vtex.com/tutorial/how-to-assemble-the-cart-url--u3Tj5wagnukYwG84IQU06). It's purpose is to send the user back to the checkout with the items they left in the cart.
+The `addToCartURL` variable is formatted to work with the [cart URL](https://help.vtex.com/tutorial/how-to-assemble-the-cart-url--u3Tj5wagnukYwG84IQU06). Its purpose is to send the user back to the checkout with the items in the abandoned cart.
