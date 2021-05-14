@@ -52,3 +52,10 @@ Aditionally to the trigger configuration, you must create the message center tem
 	"addToCartURL": "add?sku=1&qty=1&seller=1&sku=2&qty=1&seller=1"
 }
 ```
+
+
+On the message center template, you can send the user directly to the abandoned cart by combining the `addToCartURL` variable and your store's checkout URL:
+```
+https://<storeUrl>/checkout/#/{{addToCartURL}}
+```
+Where `<storeUrl>` is your store URL.
