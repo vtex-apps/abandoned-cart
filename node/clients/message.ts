@@ -3,7 +3,6 @@ import { pipe } from 'ramda'
 
 import configEmail from '../configs/configEmail'
 
-
 interface AbandonedCartMailParameters {
   items: MailItem[]
   email: string
