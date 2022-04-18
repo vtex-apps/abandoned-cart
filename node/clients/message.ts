@@ -1,6 +1,8 @@
 import { JanusClient, InstanceOptions, IOContext } from '@vtex/api'
 import { pipe } from 'ramda'
 
+import configEmail from '../configs/configEmail'
+
 interface AbandonedCartMailParameters {
   items: MailItem[]
   email: string
@@ -35,5 +37,13 @@ export default class Message extends JanusClient {
     }
 
     return this.http.post(`/api/mail-service/pvt/sendmail`, data)
+  }
+
+  public async sendTemplate(): Promise<any> {
+    const data = {
+      ...configEmail,
+    }
+
+    return this.http.post(`/api/template-render/pvt/templates`, data)
   }
 }

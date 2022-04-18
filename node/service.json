@@ -10,5 +10,11 @@
       "path": "/_v/abandoned-cart",
       "public": true
     }
+  },
+  "events": {
+    "configureMailTemplate": {
+      "sender": "apps",
+      "keys": ["setup"]
+    }
   }
 }

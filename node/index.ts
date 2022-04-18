@@ -8,8 +8,10 @@ import {
 
 import { Clients } from './clients'
 import { abandonedCart } from './middlewares/abandonedCart'
+import { configureMailTemplate } from './events/configureMailTemplate'
 
 const TIMEOUT_MS = 10000
+const CONCURRENCY = 10
 
 // This is the configuration for clients available in `ctx.clients`.
 const clients: ClientsConfig<Clients> = {
@@ -20,6 +22,14 @@ const clients: ClientsConfig<Clients> = {
     default: {
       retries: 2,
       timeout: TIMEOUT_MS,
+    },
+    events: {
+      exponentialTimeoutCoefficient: 2,
+      exponentialBackoffCoefficient: 2,
+      initialBackoffDelay: 50,
+      retries: 1,
+      timeout: TIMEOUT_MS,
+      concurrency: CONCURRENCY,
     },
   },
 }
@@ -37,6 +47,9 @@ declare global {
 // Export a service that defines route handlers and client options.
 export default new Service({
   clients,
+  events: {
+    configureMailTemplate,
+  },
   routes: {
     abandonedCart: method({
       POST: [abandonedCart],

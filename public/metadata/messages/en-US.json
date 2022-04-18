@@ -1,7 +1,7 @@
 {
   "name": "Abandoned Cart",
   "headline": "Send e-mail notifications for users who left an abandoned cart without finish the purchase.",
-  "overview": "This application allows the store to send e-mails to the consumers, reminding them that they have a pending cart. This enhances the conversion rate for the store and increases the client fidelity. This app it's a service which will be monitoring to send emails to customers who left abandoned carts.",
+  "overview": "This app is a service that will monitor abandoned cards to send emails to customers who left those.",
   "features": [
     "Allows sending of e-mails for abandoned carts automatically",
     "Contribute to increase the conversion rate"
