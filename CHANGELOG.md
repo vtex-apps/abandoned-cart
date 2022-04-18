@@ -8,8 +8,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Fix
 - The template is created before a certain event
-## [3.0.1] - 2021-06-10
-### Fix
 - Improve CHANGELOG.md and messages of metadata
 ### Fix
 - Add a new event, to configure the type of template that will be used in to send emails
