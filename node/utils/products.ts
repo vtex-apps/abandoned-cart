@@ -15,8 +15,11 @@ export const mapProducts = (
       productName: sku?.nameComplete,
       image: sku?.images[0].imageUrl,
       sellingPrice: sku?.sellers[0].commertialOffer.Price,
+      listPrice: sku?.sellers[0].commertialOffer.ListPrice,
       quantity: s.qty,
       link: product?.linkText,
+      sellerId: sku?.sellers[0].sellerId,
+      sellerName: sku?.sellers[0].sellername,
       availabilityQuantity: sku?.sellers[0].commertialOffer.AvailableQuantity,
     }
   })
