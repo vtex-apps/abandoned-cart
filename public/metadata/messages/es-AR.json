@@ -1,6 +1,6 @@
 {
   "name": "Carrito Abandonado",
-  "headline": "Envia notificaciones por e-mail a los clientes que cargaron productos en el carrito pero no finalizaron la compra",
+  "headline": "Envia notificaciones por e-mail a los clientes que cargaron productos en el carrito pero no finalizaron la compra.",
   "overview": "Esta aplicacion permite a su tienda enviar correos a los consumidores recordandoles que tienen un carrito sin finalizar. Esto mejora la conversion de la tienda y aumenta la fidelidad de los clientes.",
   "features": [
     "Permite a su tienda enviar correos a los consumidores recordandoles que tienen un carrito sin finalizar."

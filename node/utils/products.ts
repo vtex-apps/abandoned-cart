@@ -1,12 +1,3 @@
-// export const mapProducts = (products: any) => {
-//   return products.map((p: any) => ({
-//     id: p.productId,
-//     image: p.items[0].images[0].imageUrl,
-//     sellingPrice: p.items[0].sellers[0].commertialOffer.Price,
-//     quantity: 1
-//   }))
-// }
-
 export const mapProducts = (
   products: SearchProduct[],
   skus: SkuURLItem[]

@@ -1,7 +1,7 @@
 {
   "name": "abandoned-cart-service",
   "vendor": "vtexlatam",
-  "version": "2.0.8",
+  "version": "3.1.0",
   "title": "Abandoned Cart Service",
   "description": "Abandoned cart service for Store Framework",
   "mustUpdateAt": "2018-01-04",
@@ -46,6 +46,21 @@
     },
     {
       "name": "colossus-write-logs"
+    },
+    {
+      "name": "template-criar"
+    },
+    {
+      "name": "template-editar"
+    },
+    {
+      "name": "read-workspace-apps-assets"
+    },
+    {
+      "name": "update-app-settings"
+    },
+    {
+      "name": "install-apps"
     }
   ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
