@@ -9,12 +9,12 @@ export const mapProducts = (
 
       return sku !== undefined
     })
-
+    const sellingPrice = decimalNumber(sku?.sellers[0].commertialOffer.Price as number)
     return {
       id: s.id,
       productName: sku?.nameComplete,
       image: sku?.images[0].imageUrl,
-      sellingPrice: sku?.sellers[0].commertialOffer.Price,
+      sellingPrice,
       quantity: s.qty,
       link: product?.linkText,
       availabilityQuantity: sku?.sellers[0].commertialOffer.AvailableQuantity,
@@ -51,3 +51,9 @@ export const mapSkus = (skuURL: string) => {
     }, []) ?? []
   )
 }
+const decimalNumber = (num: number): string | number => {
+    if(num === undefined) return num
+    const dec = num.toString().split('.')[1]
+    const len = dec && dec.length > 2 ? dec.length : 2
+    return Number(num).toFixed(len)
+  }

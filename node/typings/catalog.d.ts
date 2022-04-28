@@ -316,7 +316,7 @@ interface MailItem {
   id?: string
   productName?: string
   image?: string
-  sellingPrice?: number
+  sellingPrice?: number | string
   quantity?: string
   link?: string
   availabilityQuantity?: number
