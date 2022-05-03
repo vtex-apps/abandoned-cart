@@ -1,3 +1,11 @@
+const getPriceWithDecimal = (num: number): string => {
+  if (!num) return Number(0).toFixed(2)
+  const dec = num.toString().split('.')[1]
+  const len = dec && dec.length > 2 ? dec.length : 2
+
+  return Number(num).toFixed(len)
+}
+
 export const mapProducts = (
   products: SearchProduct[],
   skus: SkuURLItem[]
@@ -9,7 +17,11 @@ export const mapProducts = (
 
       return sku !== undefined
     })
-    const sellingPrice = decimalNumber(sku?.sellers[0].commertialOffer.Price as number)
+
+    const sellingPrice = getPriceWithDecimal(
+      sku?.sellers[0].commertialOffer.Price as number
+    )
+
     return {
       id: s.id,
       productName: sku?.nameComplete,
@@ -51,9 +63,3 @@ export const mapSkus = (skuURL: string) => {
     }, []) ?? []
   )
 }
-const decimalNumber = (num: number): string | number => {
-    if(num === undefined) return num
-    const dec = num.toString().split('.')[1]
-    const len = dec && dec.length > 2 ? dec.length : 2
-    return Number(num).toFixed(len)
-  }

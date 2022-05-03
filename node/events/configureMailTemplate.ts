@@ -10,11 +10,13 @@ export async function configureMailTemplate(ctx: EventContext<Clients>) {
 
   if (to) {
     const [appName] = to?.id?.split('@')
+
     if (
       appName.length &&
       `${process.env.VTEX_APP_VENDOR}.${process.env.VTEX_APP_NAME}` === appName
     ) {
       const response = await messageClient.sendTemplate()
+
       return response
     }
   }
