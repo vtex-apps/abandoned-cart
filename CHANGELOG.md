@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Always return a decimal in the price of the products.
+- For this, the type of the response was changed from number to string.
+- Test was performed on the mail template to validate that it does not affect its current operation.
 ### Fix
 - The template is created before a certain event
 - Improve CHANGELOG.md and messages of metadata
