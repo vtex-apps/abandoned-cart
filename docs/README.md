@@ -1,12 +1,6 @@
-## ⚠️ Maintenance ⚠️
-
-_After August 03 of 2022, this application will no longer be maintained by the FPA team or the RPT LATAM team. Maintenance will be the responsibility of the ecosystem, everyone will be able to make a branch with the changes or improvements they want to make, make a pull request and we will approve it._
-
----
-
 # Abandoned Cart Service
 
-This app can be used to trigger abandoned cart emails.
+The Abandoned Cart Service app can be used to trigger abandoned cart emails.
 
 ### Usage
 
