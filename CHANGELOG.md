@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Always return a decimal in the price of the products.
 - For this, the type of the response was changed from number to string.
 - Test was performed on the mail template to validate that it does not affect its current operation.
-- The template is created before a certain event
+- The template is created before a certain event.
 - Improve CHANGELOG.md and messages of metadata
 - Trigger automation to present app documentation at https://developers.vtex.com/.
 
