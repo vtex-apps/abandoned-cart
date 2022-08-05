@@ -1,6 +1,6 @@
 {
   "name": "abandoned-cart-service",
-  "vendor": "vtexlatam",
+  "vendor": "vtex",
   "version": "3.1.2",
   "title": "Abandoned Cart Service",
   "description": "Abandoned cart service for Store Framework",
@@ -23,9 +23,7 @@
       "url": "https://support.vtex.com/hc/requests"
     },
     "type": "free",
-    "availableCountries": [
-      "*"
-    ]
+    "availableCountries": ["*"]
   },
   "policies": [
     {
