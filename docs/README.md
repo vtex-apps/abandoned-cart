@@ -19,7 +19,7 @@ You should follow the documentation to [Setting up Cart Abandonment (Trigger)](h
 {
   "email": "{!email}",
   "skuURL": "{!rclastcart}",
-  "template": "abandoned-cart",
+  "template": "vtexcommerce-abandoned-cart",
   "additionalFields": {
     // In object you can add any additional field to send in the mail
     "firstName": "{!firstName}"
