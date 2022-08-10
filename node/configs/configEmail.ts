@@ -15,7 +15,7 @@ export default {
       CC: null,
       BCC: null,
       Subject: 'Lost Cart!',
-      Message:'Template Example',
+      Message: 'Template Example',
       Type: 'E',
       ProviderId: '00000000-0000-0000-0000-000000000000',
       ProviderName: null,
