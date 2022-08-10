@@ -177,7 +177,7 @@ style="box-sizing: border-box; width: 8rem; margin-bottom: 1rem; margin-top: 2re
 <img alt="" border="0" width="auto"
 src="http://licensemanager.vtex.com.br/api/site/pub/accounts/{{_accountInfo.Id}}/logos/show"
 style="vertical-align: top; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; border: none; max-height: 80px !important;">
-</img></a>
+</></a>
 </div>
 <h1 style="margin: 0; font-size: 50px; line-height: 58px; box-sizing: border-box !important;">Abandoned Cart</h1>
 </td>
@@ -227,7 +227,7 @@ Grátis
 <td class="ph4-ns"
 style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-top-style: solid; border-top-width: 1px; border-color:#eee; width: 100%; padding-top: 2rem; padding-bottom: 2rem !important; font-family: -apple-system, BlinkMacSystemFont, '''Segoe UI''', Roboto, Helvetica, Arial, sans-serif;"
 align="left">
-<a style="color: black" href="http://www.FINAURL.com/checkout/cart/{{addToCartURL}}">Link to the cart</a>
+<a style="color: black" href="http://www.FINALURL.com/checkout/cart/{{addToCartURL}}">Link to the cart</a>
 </td>
 </tr>
 
