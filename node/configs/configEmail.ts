@@ -14,7 +14,7 @@ export default {
       To: '{{email}}',
       CC: null,
       BCC: null,
-      Subject: 'Olvidaste tu carrito!',
+      Subject: 'Lost Cart!',
       Message:'Template Example',
       Type: 'E',
       ProviderId: '00000000-0000-0000-0000-000000000000',
