@@ -11,8 +11,10 @@ You should follow the documentation to [Setting up Cart Abandonment (Trigger)](h
 - The URL field is https://{{account}}.myvtex.com/_v/abandoned-cart.
 - Method field is POST.
 - Header fields:
+  ```html
   content-type: application/json
   accept: application/json
+  ```
 - Content as JSON field:
 
 ```json
