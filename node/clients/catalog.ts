@@ -10,10 +10,12 @@ export default class Catalog extends AppClient {
       ?.map((sku: SkuURLItem) => `fq=skuId:${sku.id}`)
       .join('&')
 
-    const sc = skus[0]?.sc || skus[skus.length - 1]?.sc || 1
+    const sc = skus[0]?.sc || skus[skus?.length - 1]?.sc || 1
 
-    return this.http.get(`/proxy/catalog/pub/products/search?${searchQS}&sc=${sc}`, {
-      metric: 'products-get'
-    })
+    return this.http.get(
+      `/proxy/catalog/pub/products/search?${searchQS}&sc=${sc}`, {
+        metric: 'products-get'
+      }
+    )
   }
 }
