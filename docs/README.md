@@ -2,39 +2,43 @@
 
 The Abandoned Cart Service app can be used to trigger abandoned cart emails.
 
-### Usage
+## Installation
 
-To use it in your account, run the `vtex install vtex.abandoned-cart-service` command.
+Open the terminal and run the following command:
 
-You should follow the documentation to [Setting up Cart Abandonment (Trigger)](https://help.vtex.com/tutorial/setting-up-abandoned-carts--tutorials_740) but in the Action tab you should select Send an HTTP Request with the follow configuration:
+```
+vtex install vtex.abandoned-cart-service
+```
 
-- The URL field is https://{{account}}.myvtex.com/_v/abandoned-cart.
-- Method field is POST.
-- Header fields:
-  ```html
+## Usage
+
+Follow the [Setting up Cart Abandonment (Trigger)](https://help.vtex.com/tutorial/setting-up-abandoned-carts--tutorials_740) guide, but in the **Action** tab, select **Send an HTTP Request** with the following configuration:
+
+- **URL:** `https://{accountName}.myvtex.com/_v/abandoned-cart`.
+- **Method:** POST.
+- **Header:**
+  ```sh
   content-type: application/json
   accept: application/json
   ```
 - Content as JSON field:
-
-```json
-{
-  "email": "{!email}",
-  "skuURL": "{!rclastcart}",
-  "template": "vtexcommerce-abandoned-cart",
-  "additionalFields": {
-    // In object you can add any additional field to send in the mail
-    "firstName": "{!firstName}"
+  ```json
+  {
+    "email": "{!email}",
+    "skuURL": "{!rclastcart}",
+    "template": "vtexcommerce-abandoned-cart",
+    "additionalFields": {
+      // In object you can add any additional field to send in the mail
+      "firstName": "{!firstName}"
+    }
   }
-}
-```
-Like the example bellow:
-<img width="1440" alt="Captura de Tela 2022-08-03 às 17 51 51" src="https://user-images.githubusercontent.com/67066494/184005464-d06e1cda-3b21-42ec-b020-d85d684e6b7c.png">
+  ```
 
+![](https://user-images.githubusercontent.com/67066494/184005464-d06e1cda-3b21-42ec-b020-d85d684e6b7c.png)
 
-_The template field in the JSON above depends on the template id configured in the message center_
+> The template field in the JSON above depends on the template `id` configured in the Message Center.
 
-The app installation should automatically generate a new template in the message center with the id vtexcommerce-abandoned-cart and this can be edited to create the desired template. To style the email the following json can be used as an example of JSON Data:
+The app installation should automatically generate a new template in the message center with the `id` `vtexcommerce-abandoned-cart`, which can be edited to create the desired template. To style the email, the following JSON can be used as an example of JSON Data:
 
 ```json
 {
@@ -88,7 +92,7 @@ The app installation should automatically generate a new template in the message
 }
 ```
 
-You can use the following template as an example:
+Use the following template as an example:
 
 ```html
 <!DOCTYPE html
