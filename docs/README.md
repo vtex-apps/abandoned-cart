@@ -1,5 +1,11 @@
 # Abandoned Cart Service
 
+##  ⚠️ Maintenance ⚠️
+
+*Starting June 1st 2023, this application will no longer be maintained by VTEX.*
+
+---
+
 The Abandoned Cart Service app can be used to trigger abandoned cart emails.
 
 ## Installation
