@@ -1,4 +1,5 @@
-import { AppClient, InstanceOptions, IOContext } from '@vtex/api'
+import type { InstanceOptions, IOContext } from '@vtex/api'
+import { AppClient } from '@vtex/api'
 
 export default class Catalog extends AppClient {
   constructor(ctx: IOContext, opts?: InstanceOptions) {
@@ -10,8 +11,13 @@ export default class Catalog extends AppClient {
       ?.map((sku: SkuURLItem) => `fq=skuId:${sku.id}`)
       .join('&')
 
-    return this.http.get(`/proxy/catalog/pub/products/search?${searchQS}`, {
-      metric: 'products-get',
-    })
+    const sc = skus[0]?.sc || skus[skus?.length - 1]?.sc || 1
+
+    return this.http.get(
+      `/proxy/catalog/pub/products/search?${searchQS}&sc=${sc}`,
+      {
+        metric: 'products-get',
+      }
+    )
   }
 }
