@@ -32,11 +32,8 @@
       "name": "outbound-access",
       "attrs": {
         "host": "portal.vtexcommercestable.com.br",
-        "path": "/api/mail-service/pvt/*"
+        "path": "/api/*"
       }
-    },
-    {
-      "name": "vtex.catalog-api-proxy:catalog-proxy"
     },
     {
       "name": "send-message"

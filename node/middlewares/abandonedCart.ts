@@ -1,6 +1,6 @@
 import { json } from 'co-body'
 
-import { mapProducts, mapSkus } from '../utils/products'
+import { isSalesChannelPrivate, mapProducts, mapSkus } from '../utils/products'
 
 interface AbandonedCart {
   skuURL: string
@@ -15,9 +15,14 @@ export async function abandonedCart(ctx: Context, next: () => Promise<any>) {
   } = ctx
 
   const body: AbandonedCart = await json(ctx.req)
-
   const skus = mapSkus(body.skuURL)
-  const products = await catalogClient.getProducts(skus)
+  const products = await catalogClient.getProducts(skus).catch((error: any) => {
+    if (isSalesChannelPrivate(error)) {
+      return catalogClient.getProductsPvt(skus)
+    }
+
+    throw error
+  })
 
   const items = mapProducts(products, skus).filter(
     value =>

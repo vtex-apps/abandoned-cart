@@ -63,3 +63,40 @@ export const mapSkus = (skuURL: string) => {
     }, []) ?? []
   )
 }
+
+export const mapPvtProducts = (products: any[], items: any[]): any[] => {
+  return products.map((product: any) => {
+    const item = items.find(
+      (i: any) => Number.parseInt(i.id, 10) === product.Id
+    )
+
+    return {
+      linkText: product?.DetailUrl.replace('/p', '').replace('/', ''),
+      items: [
+        {
+          itemId: item.id,
+          nameComplete: product?.NameComplete,
+          images: product?.Images.map((img: any) => ({
+            imageUrl: img.ImageUrl,
+          })),
+          sellers: [
+            {
+              commertialOffer: {
+                Price: item.sellingPrice,
+                AvailableQuantity:
+                  item?.availability === 'available' ? 9999 : 0,
+              },
+            },
+          ],
+        },
+      ],
+    }
+  })
+}
+
+export const isSalesChannelPrivate = (error: any) => {
+  return (
+    error?.response?.status === 400 &&
+    error?.response?.data === 'Sales channel not found'
+  )
+}
