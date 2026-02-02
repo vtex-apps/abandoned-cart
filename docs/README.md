@@ -4,7 +4,7 @@
 
 > ⚠️ This app is no longer maintained by VTEX. This means support and maintenance are no longer provided.
 
-The Abandoned Cart Service app can be used to trigger abandoned cart emails.
+The Abandoned Cart Service app triggers abandoned cart emails.
 
 ## Installation
 
@@ -16,11 +16,12 @@ vtex install vtex.abandoned-cart-service
 ## Step 1 > Configure the email template in Message Center
 
 1. In the VTEX Admin, go to **Store Settings > Email Templates > Templates**,    or type **Templates** in the search bar at the top of the page.
-2. Search for **vtexcommerce-abandoned-cart** .
+2. Search for `vtexcommerce-abandoned-cart`.
 3. Select **Enable Email Sending?** and **Use Default Sender**.
 4. Fill in the **Email Title** field as desired.
 5. Fill in the **Recipient (To)** with {{email}}.
-6. In **Html**, enter the created or Use the following default email template information.
+6. In `Html`, enter the created or use the following default email template information.
+   
 ```
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -161,61 +162,63 @@ line-height:20px; border-top:1px solid #eee; width:100%; padding:2rem 0;">
 
 </html>
 ```
+
 The `addToCartURL` variable is formatted to work with the [cart URL](https://help.vtex.com/tutorial/how-to-assemble-the-cart-url--u3Tj5wagnukYwG84IQU06). Its purpose is to send the user back to the checkout with the items in the abandoned cart.
 
-7. In **JSON Data** , enter following JSON as an example of JSON Data:
-```
-{
-  "email": "teste@vtex.com.br",
-  "items": [
-    {
-      "id": "880010",
-      "productName": "adidas Men's Performance Polo - Blast Blue S",
-      "image": "https://bibi.vteximg.com.br/arquivos/ids/155405/adidas-mens-performance-p olo-blast-blue.jpg?v=637947886549170000",
-      "sellingPrice": "455.00",
-      "quantity": "1",
-      "link": "adidas-mens-performance-polo-blast-blue",
-      "availabilityQuantity": 1000000
-    }
-  ],
-  "addToCartURL": "add?sku=880010&qty=1&seller=1&sc=1",
-  "additionalFields": {
-    "firstName": "Teste VTEX"
-  },
-  "_accountInfo": {
-    "MainAccountName": "teste",
-    "AccountName": "teste",
-    "Cnpj": null,
-    "Id": "278fe15c-f0eb-4c30-81a2-f42b29113f1a",
-    "AppId": null,
-    "IsActive": true,
-    "IsOperating": false,
-    "CreationDate": "2022-06-21T19:58:01.3387095Z",
-    "OperationDate": null,
-    "CompanyName": "Companhia Brasileira de Tecnologia para ecommerce",
-    "TradingName": "VTEX",
-    "City": null,
-    "Complement": null,
-    "Country": null,
-    "State": null,
-    "Address": null,
-    "District": null,
-    "Number": null,
-    "PostalCode": null,
-    "Licenses": [
-      7
+7. In **JSON Data**, enter fthe ollowing JSON as an example of JSON Data:
+  
+  ```
+  {
+    "email": "teste@vtex.com.br",
+    "items": [
+      {
+        "id": "880010",
+        "productName": "adidas Men's Performance Polo - Blast Blue S",
+        "image": "https://bibi.vteximg.com.br/arquivos/ids/155405/adidas-mens-performance-p olo-blast-blue.jpg?v=637947886549170000",
+        "sellingPrice": "455.00",
+        "quantity": "1",
+        "link": "adidas-mens-performance-polo-blast-blue",
+        "availabilityQuantity": 1000000
+      }
     ],
-    "ParentAccountId": null,
-    "ParentAccountName": null,
-    "InactivationDate": null,
-    "Platform": "vtex",
-    "Privacy": null,
-    "HasPiiRestriction": false,
-    "Infra": null
+    "addToCartURL": "add?sku=880010&qty=1&seller=1&sc=1",
+    "additionalFields": {
+      "firstName": "Teste VTEX"
+    },
+    "_accountInfo": {
+      "MainAccountName": "teste",
+      "AccountName": "teste",
+      "Cnpj": null,
+      "Id": "278fe15c-f0eb-4c30-81a2-f42b29113f1a",
+      "AppId": null,
+      "IsActive": true,
+      "IsOperating": false,
+      "CreationDate": "2022-06-21T19:58:01.3387095Z",
+      "OperationDate": null,
+      "CompanyName": "Companhia Brasileira de Tecnologia para ecommerce",
+      "TradingName": "VTEX",
+      "City": null,
+      "Complement": null,
+      "Country": null,
+      "State": null,
+      "Address": null,
+      "District": null,
+      "Number": null,
+      "PostalCode": null,
+      "Licenses": [
+        7
+      ],
+      "ParentAccountId": null,
+      "ParentAccountName": null,
+      "InactivationDate": null,
+      "Platform": "vtex",
+      "Privacy": null,
+      "HasPiiRestriction": false,
+      "Infra": null
+    }
   }
-}
-```
-8. Click on **Save**.
+  ```
+8. Click **Save**.
 
 ## Step 2 > Perform the [SPF release](https://help.vtex.com/tutorial/setting-up-abandoned-carts--tutorials_740)
 
@@ -224,14 +227,14 @@ The `addToCartURL` variable is formatted to work with the [cart URL](https://hel
 1. In the VTEX Admin, go to **Store Settings > Storefront > Master Data**.
 2. In Master Data, click **Applications > Advanced Settings > Data structure**.
 3. Click the **Trigger** tab.
-4. Click the Add ``New button``.
+4. Click `New button`.
 5. Complete the following fields:
    1. **Name**: Enter the trigger name.
    2. **Data Entity**: Select the Customer entity.
    3. **Status**: Check the **Enabled** option.
 6. On the **Rules** tab, select An attribute value is changed.
 7. Under **Field**, select Last session.
-8. Click ``Add Filter`` five times to display the filter fields. Select them and complete the information as shown below:
+8. Click `Add Filter` five times to display the filter fields. Select them and complete the information as shown below:
       1. **Checkout - Different from - Completed - and**
       2. **Checkout – Is not null – and**
       3. **Cart - Is not null - and**
@@ -265,10 +268,4 @@ The `addToCartURL` variable is formatted to work with the [cart URL](https://hel
 11. Click **Save**.
 12. Create a cart and close the page to test the trigger.
 
-### Note:
-A page session expires in 30 minutes. Only after this time does Master Data start counting the time scheduled for the Abandoned Cart trigger. Therefore, the time until the email arrives corresponds to the session time (30 minutes) plus the time scheduled in the trigger.
-
-
-
-
-
+> A page session expires in 30 minutes. Only after this time does Master Data start counting the time scheduled for the Abandoned Cart trigger. Therefore, the time until the email arrives corresponds to the session time (30 minutes) plus the time scheduled in the trigger.
