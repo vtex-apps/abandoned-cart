@@ -1,10 +1,8 @@
 # Abandoned Cart Service
 
-##  ⚠️ Maintenance ⚠️
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex-apps/abandoned-cart)
 
-*Starting June 1st 2023, this application will no longer be maintained by VTEX.*
-
----
+> ⚠️ This app is no longer maintained by VTEX. This means support and maintenance are no longer provided.
 
 The Abandoned Cart Service app can be used to trigger abandoned cart emails.
 
@@ -269,6 +267,7 @@ The `addToCartURL` variable is formatted to work with the [cart URL](https://hel
 
 ### Note:
 A page session expires in 30 minutes. Only after this time does Master Data start counting the time scheduled for the Abandoned Cart trigger. Therefore, the time until the email arrives corresponds to the session time (30 minutes) plus the time scheduled in the trigger.
+
 
 
 
