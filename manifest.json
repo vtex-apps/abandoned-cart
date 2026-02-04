@@ -1,7 +1,7 @@
 {
   "name": "abandoned-cart-service",
   "vendor": "vtex",
-  "version": "3.1.6",
+  "version": "3.1.7",
   "title": "Abandoned Cart Service",
   "description": "Abandoned cart service for Store Framework",
   "mustUpdateAt": "2018-01-04",
